@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 import SectionHeader from '../components/SectionHeader.jsx';
 import { caseStudies } from '../data/portfolio.js';
 
@@ -97,6 +98,23 @@ export default function Projects() {
                   <div className="mt-6 flex items-center gap-3 text-xs text-cocoa">
                     <span className="rounded-full bg-renaissance/10 px-3 py-1">Narrative step {activeStep + 1} of {project.steps.length}</span>
                     <span className="rounded-full bg-ochre/10 px-3 py-1">Interactive walkthrough</span>
+                  </div>
+                  <div className="mt-6 rounded-2xl bg-white/70 p-4">
+                    <div className="flex items-center justify-between text-xs text-cocoa">
+                      <span className="font-semibold text-ink">Signal lift over time</span>
+                      <span className="rounded-full bg-ivory px-3 py-1 text-renaissance">Momentum</span>
+                    </div>
+                    <div className="mt-3 h-32">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={project.trend}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="#D7E6F3" />
+                          <XAxis dataKey="name" stroke="#1B4D7A" fontSize={10} />
+                          <YAxis stroke="#1B4D7A" fontSize={10} />
+                          <Tooltip contentStyle={{ borderRadius: 12, borderColor: '#D7E6F3' }} />
+                          <Line type="monotone" dataKey="value" stroke="#1B4D7A" strokeWidth={2} dot={false} />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
                   </div>
                 </motion.div>
               </AnimatePresence>

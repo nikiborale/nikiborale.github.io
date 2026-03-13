@@ -63,6 +63,14 @@ export const caseStudies = [
     title: 'Marketing Optimization ML Model',
     tags: ['Machine Learning', 'Growth', 'Analytics'],
     summary: 'Optimizing marketing interventions with predictive segmentation and experimentation.',
+    trend: [
+      { name: 'W1', value: 18 },
+      { name: 'W2', value: 24 },
+      { name: 'W3', value: 29 },
+      { name: 'W4', value: 36 },
+      { name: 'W5', value: 42 },
+      { name: 'W6', value: 50 },
+    ],
     steps: [
       {
         title: 'Problem',
@@ -99,6 +107,14 @@ export const caseStudies = [
     title: 'Blockchain Financial Transaction Product',
     tags: ['Fintech', 'Blockchain', 'MVP'],
     summary: 'Defining a blockchain-enabled transaction platform with rapid scoping.',
+    trend: [
+      { name: 'W1', value: 14 },
+      { name: 'W2', value: 22 },
+      { name: 'W3', value: 28 },
+      { name: 'W4', value: 34 },
+      { name: 'W5', value: 38 },
+      { name: 'W6', value: 44 },
+    ],
     steps: [
       {
         title: 'Problem',
@@ -135,6 +151,14 @@ export const caseStudies = [
     title: 'Predictive Risk Forecasting',
     tags: ['Time Series', 'AI', 'Strategy'],
     summary: 'Forecasting disruption risk to protect revenue and resiliency.',
+    trend: [
+      { name: 'W1', value: 20 },
+      { name: 'W2', value: 27 },
+      { name: 'W3', value: 33 },
+      { name: 'W4', value: 39 },
+      { name: 'W5', value: 45 },
+      { name: 'W6', value: 52 },
+    ],
     steps: [
       {
         title: 'Problem',
@@ -234,6 +258,31 @@ export const dataFlows = [
     action: 'Rolled out tiered packaging and upsell paths.',
     impact: 'Increased ARR expansion by 18%.',
   },
+];
+
+export const financeSignals = [
+  { name: 'Awareness', value: 62 },
+  { name: 'Activation', value: 54 },
+  { name: 'Retention', value: 71 },
+  { name: 'Revenue', value: 46 },
+  { name: 'Advocacy', value: 38 },
+];
+
+export const dashboardMix = [
+  { name: 'Revenue', value: 42 },
+  { name: 'Engagement', value: 68 },
+  { name: 'Efficiency', value: 55 },
+  { name: 'Risk', value: 49 },
+  { name: 'Quality', value: 63 },
+];
+
+export const skillsRadar = [
+  { metric: 'Strategy', value: 90 },
+  { metric: 'Analytics', value: 92 },
+  { metric: 'Execution', value: 86 },
+  { metric: 'Collaboration', value: 88 },
+  { metric: 'Design', value: 80 },
+  { metric: 'Experimentation', value: 84 },
 ];
 
 export const gallery = [

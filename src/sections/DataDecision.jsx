@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import {
   AreaChart,
   Area,
+  BarChart,
+  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -9,7 +11,7 @@ import {
   Tooltip,
 } from 'recharts';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { dataFlows } from '../data/portfolio.js';
+import { dataFlows, dashboardMix } from '../data/portfolio.js';
 
 const insightSeries = [
   { name: 'Week 1', value: 38 },
@@ -71,15 +73,15 @@ export default function DataDecision() {
                 <AreaChart data={insightSeries}>
                   <defs>
                     <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#9E2A2B" stopOpacity={0.4} />
-                      <stop offset="95%" stopColor="#9E2A2B" stopOpacity={0.05} />
+                      <stop offset="5%" stopColor="#1B4D7A" stopOpacity={0.4} />
+                      <stop offset="95%" stopColor="#1B4D7A" stopOpacity={0.05} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#E8DCD0" />
-                  <XAxis dataKey="name" stroke="#9E2A2B" fontSize={12} />
-                  <YAxis stroke="#9E2A2B" fontSize={12} />
-                  <Tooltip contentStyle={{ borderRadius: 16, borderColor: '#E8DCD0' }} />
-                  <Area type="monotone" dataKey="value" stroke="#9E2A2B" fill="url(#colorValue)" strokeWidth={2} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#D7E6F3" />
+                  <XAxis dataKey="name" stroke="#1B4D7A" fontSize={12} />
+                  <YAxis stroke="#1B4D7A" fontSize={12} />
+                  <Tooltip contentStyle={{ borderRadius: 16, borderColor: '#D7E6F3' }} />
+                  <Area type="monotone" dataKey="value" stroke="#1B4D7A" fill="url(#colorValue)" strokeWidth={2} />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -91,6 +93,20 @@ export default function DataDecision() {
               <div className="rounded-2xl bg-ivory/80 p-4 text-center">
                 <p className="text-lg font-semibold text-renaissance">2x</p>
                 <p>Faster readouts</p>
+              </div>
+            </div>
+            <div className="mt-8 rounded-2xl bg-ivory/70 p-4">
+              <p className="text-sm font-semibold text-ink">Dashboard signal mix</p>
+              <div className="mt-4 h-44">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={dashboardMix} barSize={28}>
+                    <CartesianGrid vertical={false} stroke="#D7E6F3" />
+                    <XAxis dataKey="name" stroke="#1B4D7A" fontSize={11} />
+                    <YAxis stroke="#1B4D7A" fontSize={11} />
+                    <Tooltip contentStyle={{ borderRadius: 14, borderColor: '#D7E6F3' }} />
+                    <Bar dataKey="value" fill="#48BFE3" radius={[8, 8, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
               </div>
             </div>
           </motion.div>
