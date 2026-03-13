@@ -1,61 +1,62 @@
 import { motion } from 'framer-motion';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { timeline } from '../data/content.js';
+import { timeline } from '../data/portfolio.js';
 
 export default function About() {
   return (
-    <section id="about" className="relative py-16">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="about" className="scroll-mt">
+      <div className="mx-auto max-w-6xl px-6 py-10">
         <SectionHeader
           eyebrow="About"
-          title="Nikita Borale"
-          description="Engineer turned product manager with healthcare consulting experience. Passionate about data-driven product strategy, fintech, AI in healthcare, entrepreneurship, and painting."
+          title="A product leader blending analytics, strategy, and artistic intuition"
+          description="Product Manager with a strong analytics and technical background, a Master of Engineering Management from Dartmouth College, and experience across healthcare, AI products, analytics, and enterprise platforms. Interested in fintech, AI, and product strategy, and passionate about creative expression through painting."
         />
-        <div className="grid gap-10 md:grid-cols-2">
-          <div className="space-y-4 text-fog">
-            <div className="glass-card rounded-2xl p-5">
-              <p className="text-ivory font-semibold">Education</p>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed">
-                <li>• Master of Engineering Management, Dartmouth</li>
-                <li>• Bachelor’s in Mechanical Engineering</li>
-              </ul>
-            </div>
-            <div className="glass-card rounded-2xl p-5">
-              <p className="text-ivory font-semibold">Experience</p>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed">
-                <li>• Technical Product Manager at Blue Health Intelligence</li>
-                <li>• Healthcare consulting experience</li>
-                <li>• Product strategy and analytics work</li>
-              </ul>
-            </div>
-            <div className="glass-card rounded-2xl p-5">
-              <p className="text-ivory font-semibold">Interests</p>
-              <ul className="mt-3 grid grid-cols-2 gap-2 text-sm leading-relaxed">
-                <li>• Product strategy</li>
-                <li>• Fintech & markets</li>
-                <li>• AI in healthcare</li>
-                <li>• Entrepreneurship</li>
-                <li>• Creative work & painting</li>
-              </ul>
-            </div>
-          </div>
-
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <motion.div
+            className="rounded-3xl bg-white/75 p-6 shadow-soft"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="glass-card relative rounded-2xl p-6"
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
           >
-            <p className="text-sm uppercase tracking-[0.25em] text-sage">Career timeline</p>
-            <div className="mt-5 space-y-6">
-              {timeline.map((item, idx) => (
-                <div key={item.title} className="relative pl-6">
-                  <span className="absolute left-0 top-1 h-3 w-3 rounded-full bg-gold" />
-                  <p className="text-ivory font-semibold">{item.title}</p>
-                  <p className="text-sm text-sage">{item.period}</p>
-                  <p className="text-sm text-fog">{item.detail}</p>
-                  {idx !== timeline.length - 1 && <div className="absolute left-[5px] top-4 h-14 w-px bg-white/15" />}
+            <h3 className="serif text-2xl text-ink">Signature focus</h3>
+            <p className="mt-3 text-cocoa">
+              I build products where data meets human intuition. My work centers on translating ambiguous, complex
+              problems into clear product narratives, measurable experiments, and elegant execution. I love shaping
+              products that feel both strategic and beautifully crafted.
+            </p>
+            <div className="mt-5 grid gap-3 text-sm text-cocoa">
+              <div className="flex items-start gap-2">
+                <span className="text-renaissance">✦</span>
+                <p>Enterprise healthcare + AI product strategy with measurable impact.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-renaissance">✦</span>
+                <p>Analytics-driven roadmaps that turn insight into stakeholder alignment.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-renaissance">✦</span>
+                <p>Creative exploration through painting to sharpen pattern recognition and storytelling.</p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className="rounded-3xl border border-renaissance/10 bg-white/70 p-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="serif text-2xl text-ink">Career timeline</h3>
+            <div className="mt-6 space-y-5">
+              {timeline.map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <div className="mt-1 h-3 w-3 rounded-full bg-renaissance" />
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.2em] text-renaissance/70">{item.year}</p>
+                    <p className="font-semibold text-ink">{item.title}</p>
+                    <p className="text-sm text-cocoa">{item.detail}</p>
+                  </div>
                 </div>
               ))}
             </div>

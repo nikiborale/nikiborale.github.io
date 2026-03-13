@@ -2,30 +2,34 @@ import Navigation from './components/Navigation.jsx';
 import BackgroundGrid from './components/BackgroundGrid.jsx';
 import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
-import Thinking from './sections/Thinking.jsx';
-import CaseStudies from './sections/CaseStudies.jsx';
-import Finance from './sections/Finance.jsx';
-import Breakdowns from './sections/Breakdowns.jsx';
-import Creative from './sections/Creative.jsx';
+import Experience from './sections/Experience.jsx';
+import Projects from './sections/Projects.jsx';
+import ProductThinking from './sections/ProductThinking.jsx';
+import DataDecision from './sections/DataDecision.jsx';
+import Artwork from './sections/Artwork.jsx';
 import Writing from './sections/Writing.jsx';
-import NowSection from './sections/Now.jsx';
+import Skills from './sections/Skills.jsx';
+import Interests from './sections/Interests.jsx';
+import Resume from './sections/Resume.jsx';
 import Contact from './sections/Contact.jsx';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#0f1722] text-ivory">
+    <div className="relative min-h-screen bg-ivory text-ink">
       <BackgroundGrid />
       <Navigation />
-      <main className="space-y-2">
+      <main className="space-y-12 pb-16">
         <Hero />
         <About />
-        <Thinking />
-        <CaseStudies />
-        <Finance />
-        <Breakdowns />
-        <Creative />
+        <Experience />
+        <Projects />
+        <ProductThinking />
+        <DataDecision />
+        <Artwork />
         <Writing />
-        <NowSection />
+        <Skills />
+        <Interests />
+        <Resume />
         <Contact />
       </main>
     </div>

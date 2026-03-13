@@ -2,40 +2,48 @@ import SectionHeader from '../components/SectionHeader.jsx';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="contact" className="scroll-mt">
+      <div className="mx-auto max-w-6xl px-6 py-10">
         <SectionHeader
           eyebrow="Contact"
-          title="Let&apos;s collaborate"
-          description="Open to product strategy conversations, fintech explorations, and creative collabs."
+          title="Let’s build something memorable"
+          description="Reach out for product leadership, strategy, or creative collaboration."
         />
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="glass-card rounded-2xl p-5 text-fog">
-            <p className="text-ivory font-semibold">Links</p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li><a className="text-gold" href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-              <li><a className="text-gold" href="mailto:nikita@example.com">Email</a></li>
-              <li><a className="text-gold" href="https://www.instagram.com" target="_blank">Instagram</a></li>
-            </ul>
-            <p className="mt-4 text-sm">Prefer a quick note? Use the form.</p>
+        <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="rounded-3xl bg-white/85 p-6 shadow-soft">
+            <h3 className="serif text-2xl text-ink">Connect</h3>
+            <div className="mt-4 space-y-3 text-sm text-cocoa">
+              <p>Email: <a className="text-renaissance" href="mailto:nikita.borale@gmail.com">nikita.borale@gmail.com</a></p>
+              <p>LinkedIn: <a className="text-renaissance" href="https://www.linkedin.com/in/nikitaborale">linkedin.com/in/nikitaborale</a></p>
+              <p>Resume: <a className="text-renaissance" href="/Nikita_Borale_Resume.pdf">Download PDF</a></p>
+            </div>
           </div>
-          <form className="glass-card rounded-2xl p-5 text-sm text-fog space-y-3">
-            <div>
-              <label className="block text-ivory">Name</label>
-              <input className="mt-1 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-ivory" placeholder="Your name" />
-            </div>
-            <div>
-              <label className="block text-ivory">Email</label>
-              <input className="mt-1 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-ivory" placeholder="you@email.com" />
-            </div>
-            <div>
-              <label className="block text-ivory">Message</label>
-              <textarea rows={4} className="mt-1 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-ivory" placeholder="Project idea or hello" />
-            </div>
-            <button type="button" className="w-full rounded-full bg-gold px-4 py-3 font-semibold text-charcoal shadow-glow">
-              Send note
-            </button>
-          </form>
+          <div className="rounded-3xl bg-white/85 p-6 shadow-soft">
+            <h3 className="serif text-2xl text-ink">Send a note</h3>
+            <form className="mt-4 grid gap-4 text-sm">
+              <input
+                type="text"
+                placeholder="Name"
+                className="rounded-2xl border border-renaissance/15 bg-ivory/70 px-4 py-3"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="rounded-2xl border border-renaissance/15 bg-ivory/70 px-4 py-3"
+              />
+              <textarea
+                rows="4"
+                placeholder="Message"
+                className="rounded-2xl border border-renaissance/15 bg-ivory/70 px-4 py-3"
+              />
+              <button
+                type="button"
+                className="rounded-full bg-renaissance px-5 py-3 text-sm font-semibold text-ivory shadow-bloom"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

@@ -1,31 +1,33 @@
 import { motion } from 'framer-motion';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { writings } from '../data/content.js';
+import { writings } from '../data/portfolio.js';
 
 export default function Writing() {
   return (
-    <section id="writing" className="py-16">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="writing" className="scroll-mt">
+      <div className="mx-auto max-w-6xl px-6 py-10">
         <SectionHeader
-          eyebrow="Writing & Insights"
-          title="Articles and ideas"
-          description="Strategy, AI in healthcare, experimentation, and lessons from building products."
+          eyebrow="Writing"
+          title="Product, AI, fintech, and reflective essays"
+          description="Blog-style cards for product insights and strategic commentary."
         />
-        <div className="grid gap-4 md:grid-cols-2">
-          {writings.map((post, idx) => (
-            <motion.div
+        <div className="grid gap-6 md:grid-cols-2">
+          {writings.map((post, index) => (
+            <motion.article
               key={post.title}
-              initial={{ opacity: 0, y: 12 }}
+              className="rounded-3xl bg-white/85 p-6 shadow-soft"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ delay: idx * 0.05 }}
-              className="glass-card rounded-2xl p-5"
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              viewport={{ once: true }}
             >
-              <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-sage">{post.tag}</span>
-              <p className="mt-3 text-xl font-semibold text-ivory">{post.title}</p>
-              <p className="text-sm text-fog">{post.blurb}</p>
-              <button className="mt-4 text-sm text-gold">Read summary →</button>
-            </motion.div>
+              <p className="text-xs uppercase tracking-[0.3em] text-renaissance/70">{post.tag}</p>
+              <h3 className="serif mt-3 text-2xl text-ink">{post.title}</h3>
+              <p className="mt-2 text-sm text-cocoa">{post.blurb}</p>
+              <button type="button" className="mt-4 text-sm font-semibold text-renaissance">
+                Read article →
+              </button>
+            </motion.article>
           ))}
         </div>
       </div>
