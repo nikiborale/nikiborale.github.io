@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  color: #0b1e2d;
-  background-color: #f3f7fb;
+  color: #3a2436;
+  background-color: #fff7f4;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -14,8 +14,8 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Source Sans 3', system-ui, -apple-system, sans-serif;
-  color: #0b1e2d;
-  background: #f3f7fb;
+  color: #3a2436;
+  background: #fff7f4;
   scroll-behavior: smooth;
 }
 
@@ -25,16 +25,16 @@ main {
 }
 
 .watercolor-surface {
-  background-image: radial-gradient(circle at 12% 8%, rgba(127, 209, 255, 0.35), transparent 40%),
-    radial-gradient(circle at 80% 16%, rgba(163, 191, 250, 0.28), transparent 45%),
-    radial-gradient(circle at 78% 70%, rgba(126, 196, 161, 0.25), transparent 38%),
-    radial-gradient(circle at 20% 80%, rgba(72, 191, 227, 0.2), transparent 45%);
+  background-image: radial-gradient(circle at 12% 8%, rgba(255, 143, 177, 0.35), transparent 40%),
+    radial-gradient(circle at 80% 16%, rgba(199, 167, 255, 0.3), transparent 45%),
+    radial-gradient(circle at 78% 70%, rgba(156, 198, 164, 0.3), transparent 38%),
+    radial-gradient(circle at 20% 80%, rgba(244, 178, 102, 0.25), transparent 45%);
 }
 
 .floral-texture {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='none' stroke='rgba(27,77,122,0.08)' stroke-width='1.4'%3E%3Cpath d='M110 14c16 20 20 46 0 68-20-22-16-48 0-68Z'/%3E%3Cpath d='M14 110c20-16 46-20 68 0-22 20-48 16-68 0Z'/%3E%3Cpath d='M206 110c-20 16-46 20-68 0 22-20 48-16 68 0Z'/%3E%3Cpath d='M110 206c-16-20-20-46 0-68 20 22 16 48 0 68Z'/%3E%3Ccircle cx='110' cy='110' r='18'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='none' stroke='rgba(180,56,96,0.1)' stroke-width='1.4'%3E%3Cpath d='M110 14c16 20 20 46 0 68-20-22-16-48 0-68Z'/%3E%3Cpath d='M14 110c20-16 46-20 68 0-22 20-48 16-68 0Z'/%3E%3Cpath d='M206 110c-20 16-46 20-68 0 22-20 48-16 68 0Z'/%3E%3Cpath d='M110 206c-16-20-20-46 0-68 20 22 16 48 0 68Z'/%3E%3Ccircle cx='110' cy='110' r='18'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
-  opacity: 0.25;
+  opacity: 0.32;
 }
 
 .serif {
@@ -46,9 +46,9 @@ main {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(27, 77, 122, 0.12);
-  box-shadow: 0 26px 60px rgba(27, 77, 122, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(180, 56, 96, 0.12);
+  box-shadow: 0 26px 60px rgba(180, 56, 96, 0.12);
   backdrop-filter: blur(8px);
 }
 
@@ -62,12 +62,12 @@ main {
   position: absolute;
   inset: -1px;
   z-index: -1;
-  background: linear-gradient(120deg, rgba(72, 191, 227, 0.55), rgba(163, 191, 250, 0.45), rgba(127, 209, 255, 0.6));
+  background: linear-gradient(120deg, rgba(244, 178, 102, 0.6), rgba(199, 167, 255, 0.5), rgba(255, 143, 177, 0.6));
   border-radius: inherit;
 }
 
 .soft-shadow {
-  box-shadow: 0 24px 60px rgba(27, 77, 122, 0.18);
+  box-shadow: 0 24px 60px rgba(180, 56, 96, 0.18);
 }
 
 .scroll-mt {
